@@ -1,0 +1,164 @@
+Starting job 835872 on b1201 on betzy at Thu Feb 29 23:34:50 CET 2024
+
+
+Currently Loaded Modules:
+  1) StdEnv                           (S)
+  2) GCCcore/12.2.0
+  3) zlib/1.2.12-GCCcore-12.2.0       (H)
+  4) binutils/2.39-GCCcore-12.2.0     (H)
+  5) GCC/12.2.0
+  6) numactl/2.0.16-GCCcore-12.2.0    (H)
+  7) XZ/5.2.7-GCCcore-12.2.0          (H)
+  8) libxml2/2.10.3-GCCcore-12.2.0    (H)
+  9) libpciaccess/0.17-GCCcore-12.2.0 (H)
+ 10) hwloc/2.8.0-GCCcore-12.2.0       (H)
+ 11) hpcx/2.13.1
+ 12) OpenMPI/4.1.4-GCC-12.2.0
+ 13) gompi/2022b
+ 14) Szip/2.1.1-GCCcore-12.2.0        (H)
+ 15) HDF5/1.14.0-gompi-2022b
+ 16) bzip2/1.0.8-GCCcore-12.2.0       (H)
+ 17) ncurses/6.3-GCCcore-12.2.0       (H)
+ 18) libreadline/8.2-GCCcore-12.2.0   (H)
+ 19) Tcl/8.6.12-GCCcore-12.2.0        (H)
+ 20) SQLite/3.39.4-GCCcore-12.2.0     (H)
+ 21) GMP/6.2.1-GCCcore-12.2.0         (H)
+ 22) libffi/3.4.4-GCCcore-12.2.0      (H)
+ 23) OpenSSL/1.1                      (H)
+ 24) Python/3.10.8-GCCcore-12.2.0
+
+  Where:
+   H:  Hidden Module
+   S:  Module is Sticky, requires --force to unload or purge
+
+ 
+
+2024-02-29 23:35:19,767 INFO     [configure_runtime.py:176] <configure_runtime> {rank 0/64} 
+     __  __      ____                              __  _______ 
+    / / / /_  __/ / /__  _________ _____ ______   /  |/  / __ \
+   / /_/ / / / / / / _ \/ ___/ __ `/ __ `/ ___/  / /|_/ / / / /
+  / __  / /_/ / / /  __/ /  / /_/ / /_/ (__  )  / /  / / /_/ / 
+ /_/ /_/\__, /_/_/\___/_/   \__,_/\__,_/____/  /_/  /_/_____/  
+       /____/ 
+                         Version 2.1.0                      
+
+ PLEASE READ AND CITE THE REFERENCES BELOW:
+ 
+ [1] Ledum, M.; Sen, S.; Li, X.; Carrer, M.; Feng Y.; Cascella, M.; Bore, S. L. 
+ HylleraasMD: A Domain Decomposition-Based Hybrid Particle-Field Software for Multi-Scale Simulations of Soft Matter.
+ J. Chem. Theory Comput. 2023.
+
+ [2] Ledum, M.; Carrer, M.; Sen, S.; Li, X.; Cascella, M.; Bore, S. L. 
+ HyMD: Massively parallel hybrid particle-field molecular dynamics in Python.
+ J. Open Source Softw. 8(84), 4149, 2023.
+ 
+ [3] Sen, S.; Ledum, M.; Bore, S. L.; Cascella, M. 
+ Soft Matter under Pressure: Pushing Particle–Field Molecular Dynamics to the Isobaric Ensemble.
+ J Chem Inf Model 2023, 63(7), 1549-9596.
+
+ [4] Bore, S. L.; Cascella, M. 
+ Hamiltonian and alias-free hybrid particle–field molecular dynamics.
+ J. Chem. Phys. 2020, 153, 094106.
+
+ [5] Pippig, M. PFFT: An extension of FFTW to massively parallel architectures.
+ SIAM J. Sci. Comput. 2013, 35, C213–C236.
+
+
+2024-02-29 23:35:19,768 INFO     [configure_runtime.py:200] <configure_runtime> {rank 0/64} Attempting to parse config file ../options.toml as .toml
+2024-02-29 23:35:19,772 INFO     [configure_runtime.py:222] <configure_runtime> {rank 0/64} Successfully parsed ../options.toml as .toml file
+2024-02-29 23:35:19,772 INFO     [configure_runtime.py:226] <configure_runtime> {rank 0/64} 
+
+	Config: /cluster/projects/nn4654k/cascella_group/new_mgcm/simulation-3-172grids/options.toml
+	--------------------------------------------------
+	n_steps: 1
+	time_step: 0.2
+	mesh_size: [172, 172, 172]
+	sigma: 0
+	kappa: 1000
+	dtype: None
+	box_size: None
+	n_print: 1
+	tau: 0.5
+	start_temperature: False
+	target_temperature: None
+	mass: 39.948
+	hamiltonian: DefaultWithChi
+	domain_decomposition: None
+	integrator: velocity-verlet
+	respa_inner: 1
+	file_name: /cluster/projects/nn4654k/cascella_group/new_mgcm/simulation-3-172grids/options.toml
+	name: None
+	tags: []
+	n_particles: None
+	max_molecule_size: 1
+	n_flush: 1
+	thermostat_work: 0.0
+	initial_energy: None
+	cancel_com_momentum: True
+	coulombtype: None
+	convergence_type: None
+	pol_mixing: None
+	dielectric_const: None
+	conv_crit: None
+	dielectric_type: []
+	self_energy: None
+	type_charges: []
+	rho0: 8.86
+	a: None
+	pressure: False
+	barostat: None
+	barostat_type: None
+	tau_p: None
+	n_b: None
+	m: []
+	filter: lj
+	filter_param: [1.1508, 0.1028, -0.6886, 0.2152]
+	command_line_full: /cluster/projects/nn4654k/cascella_group/new_mgcm/HyMD-dev/hymd/__main__.py ../options.toml d_0.68.hdf5 -p ../topol.toml
+	target_pressure:
+		P_L: None
+		P_N: None
+	bonds:
+	angle_bonds:
+	dihedrals:
+	chi:
+		H H: 1.0
+
+2024-02-29 23:35:20,421 INFO     [input_parser.py:507] <check_n_particles> {rank 0/64} No n_particles found in toml file /cluster/projects/nn4654k/cascella_group/new_mgcm/simulation-3-172grids/options.toml, defaulting to indices.shape (2)
+2024-02-29 23:35:20,421 WARNING  [input_parser.py:1051] <check_NPT_conditions> {rank 0/64} rho0 specified but no barostat,setting rho0 to average density
+/cluster/projects/nn4654k/cascella_group/new_mgcm/HyMD-dev/hymd/input_parser.py:1053: UserWarning: rho0 specified but no barostat,setting rho0 to average density
+  warnings.warn(warn_str)
+2024-02-29 23:35:20,431 WARNING  [input_parser.py:1152] <check_n_b> {rank 0/64} config.n_b not specified.Defaulting to 1
+/cluster/projects/nn4654k/cascella_group/new_mgcm/HyMD-dev/hymd/input_parser.py:1154: UserWarning: config.n_b not specified.Defaulting to 1
+  warnings.warn(warn_str)
+2024-02-29 23:35:21,803 INFO     [main.py:248] <main> {rank 0/64} pfft-python processor mesh: (8, 8)
+2024-02-29 23:35:22,470 INFO     [file_io.py:790] <store_data> {rank 0/64} 
+         step         time         temp        tot E        kin E        pot E      field E           Px           Py           Pz           ΔE
+            0            0            0     -0.43555            0     -0.43555     -0.43555            0            0            0            0
+2024-02-29 23:35:22,611 INFO     [file_io.py:790] <store_data> {rank 0/64} 
+         step         time         temp        tot E        kin E        pot E      field E           Px           Py           Pz           ΔE
+            1          0.2     0.033019     -0.45611   0.00082359     -0.45693     -0.45693            0  -4.4351e-15            0    -0.020563
+2024-02-29 23:35:22,669 INFO     [main.py:1445] <main> {rank 0/64} Elapsed time: 00:00:02.984236   Setup time: 00:00:02.785130   MD loop time: 00:00:00.199106
+
+Job 835872 consumed 1.2 billing hours from project nn4654k.
+
+Submitted 2024-02-29T23:27:59; waited 6.8 minutes in the queue after becoming eligible to run.
+
+Requested wallclock time: 60.0 minutes
+Elapsed wallclock time:   34.0 seconds
+
+Task and CPU statistics:
+ID             CPUs  Tasks  CPU util                Start  Elapsed  Exit status
+835872          128            0.0 %  2024-02-29T23:34:50   34.0 s  0
+835872.batch    128      1     0.0 %  2024-02-29T23:34:50   34.0 s  0
+835872.python   128     64    15.4 %  2024-02-29T23:34:52   32.0 s  0
+
+Used CPU time:   10.5 CPU minutes
+Unused CPU time: 1.0 CPU hours
+
+Memory statistics, in GiB:
+ID              Alloc   Usage
+835872          242.0        
+835872.batch    242.0     0.0
+835872.python   242.0     6.5
+
+Job 835872 completed at Thu Feb 29 23:35:24 CET 2024

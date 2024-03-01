@@ -1,0 +1,28 @@
+[particles]
+mass = 39.948
+max_molecule_size = 1
+
+[simulation]
+n_steps = 1                     # Number of outer steps
+n_print = 1                       # Number of steps after which the positions are saved
+n_flush = 1                       # Number of prints after which the output file is saved
+integrator = 'velocity-verlet'
+cancel_com_momentum = true        # Whether to remove the center of mass momentum
+time_step = 0.2                  # Inner loop timestep (for the fast forces)
+# temperature
+start_temperature = false           # Initial temperature
+tau = 0.5                         # Thermostat coupling constant
+hamiltonian = 'DefaultWithChi'
+filter = 'lj'
+filter_param = [1.1508, 0.1028, -0.6886, 0.2152]   # [a1, s1, a2, s2]
+
+[field]
+mesh_size = [28, 28, 28]
+kappa = 1000                      # Compressibilty
+sigma = 0                       # Particle spread
+rho0 = 8.86                       # Starting density?
+chi = [
+  ["H", "H", 1.0],
+]
+
+

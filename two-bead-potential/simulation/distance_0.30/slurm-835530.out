@@ -1,0 +1,24 @@
+
+Job 835530 consumed 4.7 billing hours from project nn4654k.
+
+Submitted 2024-02-29T15:07:35; waited 1.0 seconds in the queue after becoming eligible to run.
+
+Requested wallclock time: 60.0 minutes
+Elapsed wallclock time:   2.2 minutes
+
+Task and CPU statistics:
+ID             CPUs  Tasks  CPU util                Start  Elapsed  Exit status
+835530          128            0.0 %  2024-02-29T15:07:36  131.0 s  0
+835530.batch    128      1     0.0 %  2024-02-29T15:07:36  183.0 s  Signal 15
+835530.python   128     64     3.7 %  2024-02-29T15:08:27  134.0 s  0
+
+Used CPU time:   10.7 CPU minutes
+Unused CPU time: 4.5 CPU hours
+
+Memory statistics, in GiB:
+ID              Alloc   Usage
+835530          242.0        
+835530.batch    242.0     0.0
+835530.python   242.0     4.7
+
+Job 835530 completed at Thu Feb 29 15:10:42 CET 2024
